@@ -11,6 +11,7 @@ defmodule ExGherkin.MixProject do
       app: :my_ex_gherkin,
       version: @vsn,
       description: "Parse Gherkin Syntax",
+      compilers: [:yecc] ++ Mix.compilers(),
       package: %{
         licenses: ["Apache-2.0"],
         source_url: @github,
@@ -43,7 +44,7 @@ defmodule ExGherkin.MixProject do
 
   defp deps do
     [
-      {:jiffy, "~> 1.0"},
+      {:jiffy, "~> 1.1"},
       {:jason, "~> 1.3"}
     ]
   end
