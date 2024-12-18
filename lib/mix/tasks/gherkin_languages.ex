@@ -31,12 +31,12 @@ defmodule Mix.Tasks.GherkinLanguages do
 
     IO.puts(message(debug?, source, resource, homonyms, languages))
 
-    if debug? do
-      LanguageSupport.parse(source, homonyms, languages)
-      |> IO.inspect(limit: :infinity)
-    else
-      LanguageSupport.unload(source, resource, homonyms, languages)
-    end
+    # if debug? do
+    #   LanguageSupport.parse(source, homonyms, languages)
+    #   |> IO.inspect(limit: :infinity)
+    # else
+    LanguageSupport.unload(source, resource, homonyms, languages)
+    # end
   end
 
   defp message(true, source, _, homonyms, languages) do
